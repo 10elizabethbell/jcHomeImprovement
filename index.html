@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JC Home Improvement · General Construction · Bergenfield, NJ</title>
+<meta name="description" content="JC Home Improvement LLC: general construction, remodeling and renovation in Bergenfield, NJ. Free estimates, and we'll beat any quote.">
+<meta name="theme-color" content="#172a47">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JC Home Improvement · Building your dreams">
+<meta property="og:description" content="General construction, remodeling and renovation in Bergenfield, NJ. Free estimates, and we'll beat any quote.">
+<meta property="og:url" content="https://10elizabethbell.github.io/jcHomeImprovement/">
+<meta property="og:image" content="https://10elizabethbell.github.io/jcHomeImprovement/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --navy:#172a47;        /* glazed-tile ground */
+  --navy-deep:#122139;
+  --ink:#14213a;         /* text on light */
+  --ink-soft:#44506a;
+  --on-navy:#f3f6fa;
+  --on-navy-soft:#c3cfe0;
+  --light:#eef2f6;       /* cool white tile body */
+  --white:#ffffff;
+  --mortar:#a9a39a;
+  --gold:#f2c624;        /* the logo's bracket: primary action + brass trim only */
+  --brass-1:#b98f1c; --brass-2:#f4d465; --brass-3:#a07a12;
+  --focus:#2f7cf6;       /* form outline accent (not the button gold) */
+  --tw:46px; --th:23px; --grout:3px;
+  --pad:16px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (min-width:700px){ :root{ --tw:60px; --th:30px; --pad:32px; } }
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);font-size:17px;line-height:1.55;color:var(--ink);background:var(--white)}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px}
+::selection{background:var(--gold);color:var(--ink)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{margin:0;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,7.4vw,3.3rem);font-weight:900;text-transform:uppercase}
+p{margin:0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:10px 14px;z-index:10}
+.skip:focus{left:8px}
+
+/* ---------- header ---------- */
+.top{background:var(--white)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding-top:8px;padding-bottom:8px}
+.brand img{height:46px;width:auto}
+.tel{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font-weight:800;font-size:15.5px;text-decoration:none;white-space:nowrap;color:var(--ink);font-variant-numeric:tabular-nums}
+.tel svg{width:18px;height:18px;flex:none;color:var(--navy)}
+.tel:hover{text-decoration:underline}
+@media (max-width:374px){ .brand img{height:40px} .tel{font-size:14.5px;gap:5px} .tel svg{width:16px;height:16px} }
+@media (min-width:700px){ .brand img{height:58px} .top .wrap{min-height:84px} .tel{font-size:18px} }
+
+/* ---------- hero ---------- */
+.hero{background:var(--navy);color:var(--on-navy);display:flex;flex-direction:column;min-height:calc(100svh - 68px)}
+.hero-copy{padding:34px var(--pad) 30px}
+.hero h1{font-size:clamp(2.45rem,11.2vw,5.6rem);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:.95}
+.hero .pitch{margin-top:16px;font-size:clamp(16px,4.6vw,20px);color:var(--on-navy-soft);max-width:30ch}
+.actions{display:grid;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:6px;font:inherit;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--gold);transition:background-color .18s,color .18s,transform .12s}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#ffd84a}
+.btn-line{background:transparent;color:var(--on-navy);border-color:var(--on-navy-soft)}
+.btn-line:hover{border-color:var(--gold);color:var(--white)}
+.wall{position:relative;flex:1 1 auto;min-height:250px;
+  border-top:6px solid var(--brass-1);border-image:linear-gradient(180deg,var(--brass-2),var(--brass-1) 55%,var(--brass-3)) 1;
+  background-color:var(--mortar);
+  background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.18) 0 2px,rgba(0,0,0,0) 2px 4px,rgba(60,55,48,.28) 4px 6px,rgba(0,0,0,0) 6px 8px)}
+.wall canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:crosshair}
+@media (min-width:1024px){
+  .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:min(calc(100svh - 84px),860px)}
+  .hero-copy{padding:clamp(56px,9vh,110px) 48px 64px max(var(--pad),calc((100vw - 1160px)/2 + var(--pad)));align-self:center}
+  .actions{grid-auto-flow:column;justify-content:start;margin-top:34px}
+  .wall{border-top:0;border-left:6px solid var(--brass-1);border-image:linear-gradient(90deg,var(--brass-2),var(--brass-1) 55%,var(--brass-3)) 1;min-height:560px}
+}
+
+/* ---------- tile course divider ---------- */
+.course{display:flex;gap:var(--grout);padding:var(--grout) 0;overflow:hidden;background-color:var(--mortar);
+  background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.18) 0 2px,rgba(0,0,0,0) 2px 4px,rgba(60,55,48,.28) 4px 6px,rgba(0,0,0,0) 6px 8px);
+  border-top:5px solid var(--brass-1);border-image:linear-gradient(180deg,var(--brass-2),var(--brass-1) 55%,var(--brass-3)) 1;height:calc(var(--th) + 2*var(--grout) + 5px)}
+.course i{flex:0 0 var(--tw);height:var(--th);border-radius:2.5px;background:var(--g,#1b3155);
+  background-image:radial-gradient(ellipse at 50% 45%,rgba(255,255,255,.05) 0,rgba(0,0,0,0) 45%,rgba(0,0,0,.2) 100%),linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.12));
+  box-shadow:0 1.2px 2.5px rgba(8,16,32,.45);opacity:0;transform:translateY(-12px) scale(1.16)}
+.course i:first-child{margin-left:calc(var(--tw) / -2)}
+.course.laid i{opacity:1;transform:none;transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .14s linear;transition-delay:var(--d,0ms)}
+
+/* ---------- light sections ---------- */
+.band{padding:64px 0}
+.band-light{background:var(--light)}
+.band-white{background:var(--white)}
+.band-navy{background:var(--navy);color:var(--on-navy)}
+@media (min-width:700px){ .band{padding:104px 0} }
+.lede{font-size:clamp(18px,4.8vw,22px);line-height:1.5;margin-top:18px;max-width:34ch;color:var(--ink-soft)}
+.band-navy .lede{color:var(--on-navy-soft)}
+
+/* promise + services */
+.split{display:grid;gap:56px}
+@media (min-width:1024px){ .split{grid-template-columns:1fr 1fr;gap:80px;align-items:start} }
+.rows{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid #cfd7e1}
+.rows li{border-bottom:1px solid #cfd7e1}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:12px 0;text-decoration:none;font-weight:800;font-size:clamp(20px,5.4vw,26px);letter-spacing:-.01em}
+.arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#dfe5ec;color:var(--ink);transition:background-color .18s}
+.arrow svg{width:18px;height:18px}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--gold)}
+.row:focus-visible .arrow{outline:3px solid var(--focus);outline-offset:3px}
+
+/* steps */
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:34px}
+@media (min-width:1024px){ .steps{grid-template-columns:repeat(3,1fr);gap:48px} }
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:4px 18px}
+.steps .n{grid-row:span 2;font-size:54px;line-height:.9;font-weight:900;color:var(--gold);font-variant-numeric:tabular-nums}
+.steps h3{font-size:21px;font-weight:800;line-height:1.2;letter-spacing:-.01em}
+.steps p{color:var(--on-navy-soft)}
+
+/* local + facebook */
+.fb{display:inline-flex;align-items:center;gap:12px;margin-top:28px;min-height:56px;padding:0 22px;border-radius:6px;background:var(--navy);color:var(--white);font-weight:800;font-size:17px;text-decoration:none;transition:background-color .18s}
+.fb svg{width:22px;height:22px;flex:none}
+.fb:hover{background:#22406b}
+@media (max-width:699px){ .fb{display:flex;justify-content:center} }
+
+/* ---------- estimate form ---------- */
+.form{margin-top:30px;display:grid;gap:22px;max-width:640px}
+.field{display:grid;gap:8px}
+.field label,.field legend{font-weight:800;font-size:16px;padding:0}
+.opt{font-weight:500;color:var(--ink-soft)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],textarea,select{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--white);border:2px solid #c4ccd7;border-radius:6px;padding:13px 14px;min-height:54px;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:120px;resize:vertical}
+input[type=text]:hover,textarea:hover,select:hover{border-color:var(--focus)}
+input[type=text]:focus,textarea:focus,select:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(47,124,246,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:4px;border:2px solid #c4ccd7;background:var(--white);font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.chip span:hover{border-color:var(--focus)}
+.chip input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px;border-color:var(--focus)}
+.chip input:checked+span{background:var(--navy);border-color:var(--navy);color:var(--white);animation:set .42s cubic-bezier(.34,1.56,.64,1)}
+.chip input:checked+span:hover{border-color:var(--focus)}
+@keyframes set{0%{transform:translateY(-5px) scale(1.08)}100%{transform:none}}
+.err{color:#b3261e;font-size:15px;font-weight:600;min-height:0}
+.err:empty{display:none}
+.invalid{border-color:#b3261e!important}
+.send{width:100%;border:2px solid var(--gold)}
+.send:hover{border-color:var(--focus)}
+.send:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (min-width:700px){ .send{width:auto} }
+.note{font-size:15px;color:var(--ink-soft)}
+.note a{font-weight:700}
+.after{display:none;margin-top:6px;padding:20px;border-radius:6px;background:var(--white);border:2px solid #c4ccd7}
+.after.show{display:grid;gap:12px}
+.after textarea{min-height:150px;font-size:16px}
+.after .btn{min-height:50px;font-size:16px}
+.copy{background:var(--white);color:var(--ink);border-color:#c4ccd7}
+.copy:hover{border-color:var(--focus)}
+
+/* ---------- close + footer ---------- */
+.close{background:var(--navy);color:var(--on-navy)}
+.close .wrap{padding-top:64px;padding-bottom:48px}
+.close h2{font-size:clamp(2.2rem,10vw,5rem)}
+.close .lede{color:var(--on-navy-soft)}
+.nums{display:grid;gap:6px;margin-top:26px}
+.nums a{font-size:clamp(24px,7vw,34px);font-weight:900;text-decoration:none;color:var(--white);font-variant-numeric:tabular-nums;min-height:44px;display:inline-flex;align-items:center;width:max-content}
+.nums a:hover{color:var(--gold)}
+.wall-strip{height:170px;flex:none}
+@media (min-width:1024px){ .wall-strip{height:230px;border-left:0;border-top:6px solid var(--brass-1);border-image:linear-gradient(180deg,var(--brass-2),var(--brass-1) 55%,var(--brass-3)) 1;min-height:0} }
+.foot{background:var(--navy-deep);color:var(--on-navy-soft);font-size:15.5px}
+.foot .wrap{padding-top:36px;padding-bottom:calc(36px + env(safe-area-inset-bottom));display:grid;gap:18px}
+@media (min-width:1024px){ .foot .wrap{grid-template-columns:1.2fr 1fr 1fr;align-items:start} }
+.foot strong{color:var(--white);font-size:17px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.foot a{display:inline-flex;align-items:center;min-height:40px;color:var(--on-navy);overflow-wrap:anywhere}
+.foot a:hover{color:var(--gold)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .course i{opacity:1;transform:none}
+  .course.laid i{transition:none}
+  .chip input:checked+span{animation:none}
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: The page is a wall JC Home Improvement is tiling: bare combed thinset turns into finished navy glaze as tiles go in. It refuses the stock-kitchen-photo contractor template.
+OWN-WORLD: Navy handmade-glaze subway tiles in running bond, grey notched-trowel thinset, brass edge trim (the logo's gold bracket), cool white tile-body sections, heavy uppercase system type.
+STORY: A Bergenfield homeowner sees who they are and the "we'll beat any quote" promise, lays a few tiles with a finger, then texts for a free estimate.
+FIRST VIEWPORT: White header with their real logo left, (201) 838-5000 top right. Navy hero: "Building your dreams." huge, one pitch line, gold "Get a free estimate" and outlined WhatsApp. Under it (right half on desktop) the live wall fills the rest of the screen.
+FORM: Tile setting in thinset, #5 of 7 on my list. Seed 4a8fdc36.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="skip" href="#estimate">Skip to the free estimate form</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="JC Home Improvement, General Construction"><img src="assets/logo.webp" width="470" height="140" alt="JC Home Improvement, General Construction"></a>
+    <a class="tel" href="tel:+12018385000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>(201) 838-5000</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <h1 id="hero-title">Building your dreams.</h1>
+    <p class="pitch">Free estimates, and we'll beat any quote you bring us.</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="#estimate">Get a free estimate</a>
+      <a class="btn btn-line" id="wa-hero" href="https://wa.me/12018385000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4A8.4 8.4 0 1 1 20.5 11.6z"/></svg>WhatsApp us</a>
+    </div>
+  </div>
+  <div class="wall" aria-hidden="true"><canvas data-wall data-fill="0.42"></canvas></div>
+</section>
+
+<div class="course" aria-hidden="true"></div>
+
+<section class="band band-light" aria-labelledby="beat-title">
+  <div class="wrap split">
+    <div>
+      <h2 id="beat-title">Got a quote already? We'll beat it.</h2>
+      <p class="lede">Show us the price another contractor gave you. We'll go over the job with you, give you our estimate for free, and come in lower, without cutting corners in your home.</p>
+    </div>
+    <div>
+      <h2 id="services-title">What we do</h2>
+      <ul class="rows" aria-labelledby="services-title">
+        <li><a class="row" href="#estimate" data-pick="Construction">General construction<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a class="row" href="#estimate" data-pick="Remodel">Remodeling<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a class="row" href="#estimate" data-pick="Renovation">Renovation<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="course" aria-hidden="true"></div>
+
+<section class="band band-navy" aria-labelledby="how-title">
+  <div class="wrap">
+    <h2 id="how-title">How it works</h2>
+    <ol class="steps">
+      <li><span class="n" aria-hidden="true">1</span><h3>Tell us what you have in mind</h3><p>Text, WhatsApp or call. A photo of the space helps.</p></li>
+      <li><span class="n" aria-hidden="true">2</span><h3>Free estimate</h3><p>We go over the job and give you a price. Have another quote? We'll beat it.</p></li>
+      <li><span class="n" aria-hidden="true">3</span><h3>We build it</h3><p>Good work at a price that's easy on your pocket.</p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="course" aria-hidden="true"></div>
+
+<section class="band band-white" aria-labelledby="local-title">
+  <div class="wrap">
+    <h2 id="local-title">Licensed and local</h2>
+    <p class="lede">We're a state-licensed general construction company based right here in Bergenfield, New Jersey.</p>
+    <a class="fb" href="https://www.facebook.com/profile.php?id=100080951704352" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg>See more of our work on Facebook</a>
+  </div>
+</section>
+
+<section class="band band-light" id="estimate" aria-labelledby="estimate-title">
+  <div class="wrap">
+    <h2 id="estimate-title">Get a free estimate</h2>
+    <form class="form" id="quote" novalidate>
+      <div class="field">
+        <label for="f-name">Your name</label>
+        <input type="text" id="f-name" name="name" autocomplete="name" aria-describedby="e-name">
+        <p class="err" id="e-name" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="f-town">Your town</label>
+        <input type="text" id="f-town" name="town" autocomplete="address-level2" placeholder="e.g. Bergenfield" aria-describedby="e-town">
+        <p class="err" id="e-town" aria-live="polite"></p>
+      </div>
+      <fieldset class="field" aria-describedby="e-kind">
+        <legend>What kind of project?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="kind" value="Remodel"><span>Remodel</span></label>
+          <label class="chip"><input type="radio" name="kind" value="Renovation"><span>Renovation</span></label>
+          <label class="chip"><input type="radio" name="kind" value="Construction"><span>Construction</span></label>
+          <label class="chip"><input type="radio" name="kind" value="Not sure yet"><span>Not sure yet</span></label>
+        </div>
+        <p class="err" id="e-kind" aria-live="polite"></p>
+      </fieldset>
+      <div class="field">
+        <label for="f-what">Tell us about it</label>
+        <textarea id="f-what" name="what" placeholder="Which room or part of the house, and what you'd like done" aria-describedby="e-what"></textarea>
+        <p class="err" id="e-what" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="f-when">Best time to reach you <span class="opt">(optional)</span></label>
+        <select id="f-when" name="when">
+          <option value="">Any time</option>
+          <option>Mornings</option>
+          <option>Afternoons</option>
+          <option>Evenings</option>
+          <option>Weekends</option>
+        </select>
+      </div>
+      <button class="btn btn-gold send" type="submit">Text this to JC Home Improvement</button>
+      <p class="note">Opens a text message with your answers filled in. You can read it before you send. Prefer WhatsApp? <a href="https://wa.me/12018385000" id="wa-form">Send it on WhatsApp</a>.</p>
+      <div class="after" id="after" role="status">
+        <p><strong>Didn't open your messages?</strong> Copy this and text it to <a href="tel:+12018385000">(201) 838-5000</a>.</p>
+        <textarea id="msg" readonly aria-label="Your message"></textarea>
+        <button class="btn copy" type="button" id="copy">Copy message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="course" aria-hidden="true"></div>
+</main>
+
+<section class="close" aria-labelledby="close-title">
+  <div class="wrap">
+    <h2 id="close-title">JC Home Improvement</h2>
+    <p class="lede">Free estimates in Bergenfield, NJ. Give us a call.</p>
+    <div class="nums">
+      <a href="tel:+12018385000">(201) 838-5000</a>
+      <a href="tel:+12016818900">(201) 681-8900</a>
+    </div>
+  </div>
+  <div class="wall wall-strip" aria-hidden="true"><canvas data-wall data-fill="0.3"></canvas></div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><strong>JC Home Improvement LLC</strong><br>General Construction · Bergenfield, NJ</div>
+    <ul>
+      <li><a href="tel:+12018385000">(201) 838-5000</a></li>
+      <li><a href="tel:+12016818900">(201) 681-8900</a></li>
+      <li><a href="mailto:jcgchomeimprovement@outlook.com">jcgchomeimprovement@outlook.com</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.facebook.com/profile.php?id=100080951704352" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.instagram.com/jc_home.improvement/" rel="noopener">Instagram @jc_home.improvement</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+/* ===== Tile wall: the signature. Tune here. ===== */
+(function(){
+  var C = {
+    TILE_W: 46, TILE_W_DESK: 60,   /* subway tile width in CSS px (height = half) */
+    GROUT: 3,
+    START_IDLE: 900,               /* ms before the self-tiler starts on load */
+    AUTO_IDLE: 2200,               /* ms after the last touch before it takes over again */
+    AUTO_EVERY: 58,                /* ms between tiles when it tiles by itself */
+    HOLD: 4200,                    /* ms a finished wall stays before the trowel resets it */
+    SWEEP_MS: 1700,                /* trowel pass across the wall */
+    LAY_R: 0.8,                    /* finger lays tiles within this many tile widths */
+    PUSH_R: 1.3,                   /* and nudges set tiles within this many */
+    PUSH: 1500, SPRING: 38, DAMP: 6.5, MAX_OFF: 7,
+    DPR_MAX: 1.5
+  };
+  var GLAZES = ['#1b3155','#1e365e','#182c4d','#213a63','#1a3052','#23406b','#172a48','#1d3359'];
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var walls = [];
+
+  function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+  function rand(seed){return function(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};}
+
+  function Wall(canvas){
+    this.c = canvas; this.ctx = canvas.getContext('2d');
+    this.fill = parseFloat(canvas.getAttribute('data-fill')) || 0.4;
+    this.w = 0; this.h = 0; this.tiles = []; this.visible = true;
+    this.ptr = {on:false,x:0,y:0,lx:null,ly:null,vx:0,vy:0,moved:false};
+    this.lastUser = -1e9; this.lastAuto = 0; this.fullAt = 0; this.sweep = -1; this.born = performance.now();
+    var self = this, p = this.ptr;
+    function at(e){p.cx=e.clientX;p.cy=e.clientY;p.moved=true;self.lastUser=performance.now();self.sweep=-1;self.fullAt=0;}
+    canvas.addEventListener('pointerdown',function(e){p.on=true;p.lx=null;at(e);},{passive:true});
+    canvas.addEventListener('pointermove',function(e){if(e.pointerType==='mouse'||p.on){p.on=true;at(e);}},{passive:true});
+    function off(){p.on=false;p.lx=null;}
+    canvas.addEventListener('pointerup',off,{passive:true});
+    canvas.addEventListener('pointercancel',off,{passive:true});
+    canvas.addEventListener('pointerleave',off,{passive:true});
+    canvas.addEventListener('dragstart',function(e){e.preventDefault();});
+  }
+
+  Wall.prototype.build = function(){
+    var r = this.c.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height);
+    if (!w || !h || (w === this.w && h === this.h)) return;
+    var keep = this.tiles.length ? this.tiles.filter(function(t){return t.on;}).length / this.tiles.length : this.fill;
+    this.w = w; this.h = h;
+    var dpr = this.dpr = Math.min(window.devicePixelRatio || 1, C.DPR_MAX);
+    this.c.width = Math.round(w*dpr); this.c.height = Math.round(h*dpr);
+    var tw = this.tw = (window.innerWidth < 700 ? C.TILE_W : C.TILE_W_DESK), th = this.th = tw/2, g = C.GROUT;
+    this.makeSprites(); this.makeMortar();
+    var tiles = [], rows = Math.ceil(h/(th+g)) + 1, R = rand(7);
+    for (var row = 0; row < rows; row++){
+      var y = h - (row+1)*(th+g) + g, x = (row%2) ? -(tw+g)/2 : 0;
+      for (; x < w; x += tw+g){
+        tiles.push({x:x,y:y,cx:x+tw/2,cy:y+th/2,s:Math.floor(R()*GLAZES.length),on:false,t:-1e9,rm:-1e9,ox:0,oy:0,vx:0,vy:0});
+      }
+    }
+    var n = Math.round(tiles.length*keep);
+    for (var i = 0; i < n; i++) tiles[i].on = true;
+    this.tiles = tiles; this.next = n; this.sweep = -1; this.fullAt = 0;
+    this.trowel = null;
+  };
+
+  Wall.prototype.makeSprites = function(){
+    var dpr = this.dpr, tw = this.tw, th = this.th, pad = 5;
+    this.pad = pad; this.sprites = [];
+    for (var i = 0; i < GLAZES.length; i++){
+      var cv = document.createElement('canvas');
+      cv.width = Math.ceil((tw+pad*2)*dpr); cv.height = Math.ceil((th+pad*2)*dpr);
+      var x = cv.getContext('2d'); x.scale(dpr,dpr);
+      x.shadowColor = 'rgba(8,16,32,.5)'; x.shadowBlur = 3; x.shadowOffsetY = 1.3;
+      rr(x,pad,pad,tw,th,2.6); x.fillStyle = GLAZES[i]; x.fill();
+      x.shadowColor = 'transparent';
+      x.save(); rr(x,pad,pad,tw,th,2.6); x.clip();
+      /* glaze pools darker toward the edges, thinner and lighter in the middle */
+      var rg = x.createRadialGradient(pad+tw*.5,pad+th*.42,th*.2,pad+tw*.5,pad+th*.5,tw*.62);
+      rg.addColorStop(0,'rgba(120,150,200,'+(.07+.05*(i%3))+')'); rg.addColorStop(.55,'rgba(0,0,0,0)'); rg.addColorStop(1,'rgba(4,10,24,.32)');
+      x.fillStyle = rg; x.fillRect(pad,pad,tw,th);
+      var lg = x.createLinearGradient(0,pad,0,pad+th);
+      lg.addColorStop(0,'rgba(255,255,255,.04)'); lg.addColorStop(1,'rgba(0,0,0,.14)');
+      x.fillStyle = lg; x.fillRect(pad,pad,tw,th);
+      x.restore();
+      this.sprites.push(cv);
+    }
+  };
+
+  Wall.prototype.makeMortar = function(){
+    var w = this.w, h = this.h, dpr = this.dpr, th = this.th;
+    var cv = document.createElement('canvas'); cv.width = Math.round(w*dpr); cv.height = Math.round(h*dpr);
+    var x = cv.getContext('2d'); x.scale(dpr,dpr);
+    x.fillStyle = '#a9a39a'; x.fillRect(0,0,w,h);
+    var R = rand(13);
+    for (var i = 0; i < 9; i++){ /* damp and dry patches */
+      var px = R()*w, py = R()*h, pr = 60+R()*160, g = x.createRadialGradient(px,py,0,px,py,pr);
+      g.addColorStop(0, R() < .5 ? 'rgba(70,64,56,.13)' : 'rgba(255,255,255,.1)'); g.addColorStop(1,'rgba(0,0,0,0)');
+      x.fillStyle = g; x.fillRect(0,0,w,h);
+    }
+    /* notched-trowel ridges: each pass combed in its own arc */
+    var band = (th+C.GROUT)*4, sp = Math.max(5, th*.3);
+    for (var top = -band*.3; top < h; top += band*.82){
+      var ph = R()*6.28, ph2 = R()*6.28, A = band*(.07+R()*.09), dir = R() < .5 ? 1 : -1;
+      x.save(); x.beginPath(); x.rect(0,top,w,band); x.clip();
+      for (var y0 = top - A*2; y0 < top + band + A*2; y0 += sp){
+        for (var pass = 0; pass < 2; pass++){
+          x.beginPath();
+          for (var X = -6; X <= w+6; X += 6){
+            var Y = y0 + dir*A*Math.sin(X/w*Math.PI*1.1 + ph) + 1.6*Math.sin(X/41 + ph2 + y0*.07) + (pass ? -sp*.18 : sp*.24);
+            if (X < 0) x.moveTo(X,Y); else x.lineTo(X,Y);
+          }
+          x.lineWidth = pass ? sp*.28 : sp*.36;
+          x.strokeStyle = pass ? 'rgba(255,255,255,.2)' : 'rgba(58,52,45,.34)';
+          x.stroke();
+        }
+      }
+      x.restore();
+    }
+    for (var s = 0, n = Math.round(w*h/70); s < n; s++){ /* sand */
+      x.fillStyle = R() < .5 ? 'rgba(40,36,30,.16)' : 'rgba(255,255,255,.16)';
+      x.fillRect(R()*w, R()*h, 1, 1);
+    }
+    this.mortar = cv;
+  };
+
+  Wall.prototype.lay = function(t, now){ if (!t.on){ t.on = true; t.t = now; t.rm = -1e9; } };
+
+  Wall.prototype.touch = function(px, py, now, dvx, dvy){
+    var tw = this.tw, lay = tw*C.LAY_R, push = tw*C.PUSH_R, ts = this.tiles;
+    for (var i = 0; i < ts.length; i++){
+      var t = ts[i], dx = t.cx - px, dy = (t.cy - py)*1.6, d = Math.sqrt(dx*dx+dy*dy);
+      if (d < lay && !t.on) { this.lay(t, now); continue; }
+      if (t.on && d < push && now - t.t > 250){
+        var f = (1 - d/push), nx = d ? dx/d : 0, ny = d ? dy/d : 0;
+        t.vx += (nx*C.PUSH*f + dvx*.12)*0.016; t.vy += (ny*C.PUSH*f*.6 + dvy*.12)*0.016;
+      }
+    }
+  };
+
+  Wall.prototype.step = function(now, dt){
+    this.build();
+    if (!this.w) return;
+    var p = this.ptr, ts = this.tiles, tw = this.tw;
+    /* read the rect every frame: the page scrolls under the finger */
+    if (p.on && p.moved){
+      var r = this.c.getBoundingClientRect(), px = p.cx - r.left, py = p.cy - r.top;
+      if (p.lx === null){ p.lx = px; p.ly = py; }
+      var dx = px - p.lx, dy = py - p.ly, dist = Math.sqrt(dx*dx+dy*dy), n = Math.max(1, Math.ceil(dist/(tw*.3)));
+      var dvx = dx/Math.max(dt,.008), dvy = dy/Math.max(dt,.008);
+      for (var k = 1; k <= n; k++) this.touch(p.lx + dx*k/n, p.ly + dy*k/n, now, dvx, dvy);
+      p.lx = px; p.ly = py; p.moved = false;
+    }
+    /* the self-tiler: bottom course first, left to right, like a real setter */
+    var idle = now - Math.max(this.lastUser, this.born - C.AUTO_IDLE + C.START_IDLE);
+    if (!reduce && idle > C.AUTO_IDLE && this.sweep < 0){
+      if (now - this.lastAuto > C.AUTO_EVERY){
+        while (this.next < ts.length && ts[this.next].on) this.next++;
+        if (this.next < ts.length){ this.lay(ts[this.next], now); this.lastAuto = now; this.fullAt = 0; }
+        else {
+          for (var j = 0; j < ts.length && ts[j].on; j++);
+          if (j < ts.length) this.next = j;
+          else if (!this.fullAt) this.fullAt = now;
+          else if (now - this.fullAt > C.HOLD){ this.sweep = now; }
+        }
+      }
+    }
+    /* trowel pass: lift the tiles, comb fresh ridges, start over */
+    var sx = -1e9;
+    if (this.sweep >= 0){
+      var q = (now - this.sweep)/C.SWEEP_MS, e = q < .5 ? 2*q*q : 1 - Math.pow(-2*q+2,2)/2;
+      sx = -tw + e*(this.w + tw*2);
+      for (var i = 0; i < ts.length; i++){ var t = ts[i]; if (t.on && t.cx < sx + tw*.7){ t.on = false; t.rm = now; } }
+      if (q >= 1){ this.sweep = -1; this.next = 0; this.fullAt = 0; this.lastAuto = now + 500; }
+    }
+    /* springs */
+    for (var i2 = 0; i2 < ts.length; i2++){
+      var s = ts[i2];
+      if (s.ox || s.oy || s.vx || s.vy){
+        s.vx += (-C.SPRING*s.ox - C.DAMP*s.vx)*dt; s.vy += (-C.SPRING*s.oy - C.DAMP*s.vy)*dt;
+        s.ox += s.vx*dt; s.oy += s.vy*dt;
+        if (s.ox > C.MAX_OFF) s.ox = C.MAX_OFF; if (s.ox < -C.MAX_OFF) s.ox = -C.MAX_OFF;
+        if (s.oy > C.MAX_OFF) s.oy = C.MAX_OFF; if (s.oy < -C.MAX_OFF) s.oy = -C.MAX_OFF;
+        if (Math.abs(s.ox) < .02 && Math.abs(s.vx) < .02 && Math.abs(s.oy) < .02 && Math.abs(s.vy) < .02){ s.ox = s.oy = s.vx = s.vy = 0; }
+      }
+    }
+    this.draw(now, sx);
+  };
+
+  Wall.prototype.draw = function(now, sx){
+    var x = this.ctx, dpr = this.dpr, tw = this.tw, th = this.th, pad = this.pad, ts = this.tiles;
+    x.setTransform(1,0,0,1,0,0);
+    x.drawImage(this.mortar, 0, 0);
+    x.setTransform(dpr,0,0,dpr,0,0);
+    for (var i = 0; i < ts.length; i++){
+      var t = ts[i], a = 1, sc = 1, lift = 0;
+      if (t.on){
+        var age = reduce ? 1e9 : now - t.t;
+        if (age < 900){ a = Math.min(1, age/70); sc = 1 + .17*Math.exp(-age/120)*Math.cos(age/48); lift = -7*Math.exp(-age/80); }
+      } else {
+        var ra = now - t.rm;
+        if (ra > 260 || reduce) continue;
+        a = 1 - ra/260; sc = 1 + .07*ra/260; lift = -9*ra/260;
+      }
+      x.globalAlpha = a;
+      var w2 = (tw+pad*2)*sc, h2 = (th+pad*2)*sc;
+      x.drawImage(this.sprites[t.s], t.cx + t.ox - w2/2, t.cy + t.oy + lift - h2/2, w2, h2);
+    }
+    x.globalAlpha = 1;
+    if (sx > -tw) this.drawTrowel(x, sx);
+  };
+
+  /* a steel notched trowel seen edge-on, teeth trailing the ridges they comb */
+  Wall.prototype.drawTrowel = function(x, sx){
+    var h = this.h, sp = Math.max(5, this.th*.3);
+    var bulge = x.createLinearGradient(sx, 0, sx+22, 0);
+    bulge.addColorStop(0,'rgba(95,88,78,.55)'); bulge.addColorStop(1,'rgba(95,88,78,0)');
+    x.fillStyle = bulge; x.fillRect(sx+6, 0, 22, h);
+    x.save(); x.translate(sx, 0); x.rotate(-0.035);
+    var g = x.createLinearGradient(-8,0,8,0);
+    g.addColorStop(0,'#69717c'); g.addColorStop(.45,'#c7ced6'); g.addColorStop(1,'#7d858f');
+    x.fillStyle = g; x.shadowColor = 'rgba(10,18,32,.45)'; x.shadowBlur = 8; x.shadowOffsetX = 3;
+    x.fillRect(-7, -20, 14, h+40);
+    x.shadowColor = 'transparent'; x.fillStyle = '#a9a39a';
+    for (var y = -20; y < h+20; y += sp*2) x.fillRect(-7, y, 4, sp);
+    x.restore();
+  };
+
+  var cvs = document.querySelectorAll('canvas[data-wall]');
+  for (var i = 0; i < cvs.length; i++) walls.push(new Wall(cvs[i]));
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ walls.forEach(function(w){ if (w.c === e.target) w.visible = e.isIntersecting; }); });
+      kick();
+    });
+    walls.forEach(function(w){ io.observe(w.c); });
+  }
+  var running = false, last = 0;
+  function frame(now){
+    var dt = Math.min(.05, Math.max(.001, (now - (last || now))/1000)); last = now;
+    var any = false;
+    walls.forEach(function(w){ if (w.visible){ any = true; w.step(now, dt); } });
+    if (any) requestAnimationFrame(frame); else { running = false; last = 0; }
+  }
+  function kick(){ if (!running){ running = true; requestAnimationFrame(frame); } }
+  window.addEventListener('resize', function(){ walls.forEach(function(w){ w.build(); }); kick(); });
+  kick();
+})();
+
+/* ===== Tile course dividers: lay themselves when scrolled to ===== */
+(function(){
+  var GLAZES = ['#1b3155','#1e365e','#182c4d','#213a63','#1a3052','#23406b','#172a48','#1d3359'];
+  var STAGGER = 32; /* ms between tiles */
+  var courses = [].slice.call(document.querySelectorAll('.course')), lastW = 0;
+  function fill(){
+    var w = window.innerWidth; if (w === lastW) return; lastW = w;
+    var tw = w < 700 ? 46 : 60, n = Math.ceil(w/(tw+3)) + 2;
+    courses.forEach(function(c, ci){
+      var html = '';
+      for (var i = 0; i < n; i++) html += '<i style="--g:'+GLAZES[(i*5+ci*3+((i*i)%7))%GLAZES.length]+';--d:'+(i*STAGGER)+'ms"></i>';
+      c.innerHTML = html;
+    });
+  }
+  fill();
+  window.addEventListener('resize', fill);
+  if (!('IntersectionObserver' in window)){ courses.forEach(function(c){ c.classList.add('laid'); }); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('laid'); io.unobserve(e.target); } });
+  }, {threshold: .6});
+  courses.forEach(function(c){ io.observe(c); });
+})();
+
+/* ===== Contact links + estimate form (hands off by text message) ===== */
+(function(){
+  var NUM = '+12018385000', WA = 'https://wa.me/12018385000?text=';
+  document.getElementById('wa-hero').href = WA + encodeURIComponent("Hi JC Home Improvement! I'd like a free estimate for a project at my house.");
+
+  var form = document.getElementById('quote');
+  function val(n){ var el = form.elements[n]; return (el && el.value || '').trim(); }
+  function kind(){ var r = form.querySelector('input[name=kind]:checked'); return r ? r.value : ''; }
+  function compose(){
+    var lines = ["Hi JC Home Improvement! I'd like a free estimate.",
+      'Name: ' + val('name'), 'Town: ' + val('town'), 'Project: ' + kind(), 'Details: ' + val('what')];
+    if (val('when')) lines.push('Best time to reach me: ' + val('when'));
+    return lines.join('\n');
+  }
+  function syncWA(){ document.getElementById('wa-form').href = WA + encodeURIComponent(compose()); }
+  form.addEventListener('input', syncWA); form.addEventListener('change', syncWA); syncWA();
+
+  /* service rows pick their project type */
+  [].forEach.call(document.querySelectorAll('[data-pick]'), function(a){
+    a.addEventListener('click', function(){
+      var r = form.querySelector('input[name=kind][value="'+a.getAttribute('data-pick')+'"]');
+      if (r){ r.checked = true; syncWA(); }
+    });
+  });
+
+  function err(id, msg, field){
+    document.getElementById(id).textContent = msg;
+    if (field) field.classList.toggle('invalid', !!msg);
+    return !msg;
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true, first = null;
+    function check(id, field, msg){ var good = err(id, msg, field); if (!good && !first) first = field; ok = ok && good; }
+    check('e-name', form.elements.name, val('name') ? '' : "Add your name so we know who's texting.");
+    check('e-town', form.elements.town, val('town') ? '' : 'Add your town so we know where the job is.');
+    check('e-kind', form.querySelector('input[name=kind]'), kind() ? '' : 'Pick the closest one. "Not sure yet" is fine.');
+    check('e-what', form.elements.what, val('what') ? '' : 'Tell us a little about the project.');
+    if (!ok){ first.focus(); return; }
+    var msg = compose();
+    document.getElementById('msg').value = msg;
+    document.getElementById('after').classList.add('show');
+    window.location.href = 'sms:' + NUM + '?&body=' + encodeURIComponent(msg);
+  });
+  document.getElementById('copy').addEventListener('click', function(){
+    var t = document.getElementById('msg'), b = this;
+    t.select();
+    var done = function(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy message'; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t.value).then(done, function(){ try{ document.execCommand('copy'); done(); }catch(_){} }); }
+    else { try{ document.execCommand('copy'); done(); }catch(_){} }
+  });
+})();
+</script>
+</body>
+</html>
