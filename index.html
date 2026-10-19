@@ -370,7 +370,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     PUSH: 1500, SPRING: 38, DAMP: 6.5, MAX_OFF: 7,
     DPR_MAX: 2
   };
-  var BASE = [[216,46,22],[214,50,25],[218,44,19],[212,48,28],[220,42,21],[215,52,23]]; /* navy glaze, hsl */
+  var BASE = [[216,46,22],[216,49,25],[217,45,19],[215,47,27],[217,44,21],[216,50,23]]; /* navy glaze, hsl: one glaze, fired unevenly */
   var VARIANTS = 12;
   var THINSET = [143,138,130], GROUT = [214,218,223];
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -425,18 +425,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var dpr = this.dpr, tw = this.tw, th = this.th, pad = 5, R = rand(29);
     this.pad = pad; this.sprites = [];
     for (var i = 0; i < VARIANTS; i++){
-      var b = BASE[i % BASE.length], hue = b[0] + (R()-.5)*4, sat = b[1] + (R()-.5)*8, lit = b[2] + (R()-.5)*5;
+      var b = BASE[i % BASE.length], hue = b[0] + (R()-.5)*1.5, sat = b[1] + (R()-.5)*4, lit = b[2] + (R()-.5)*5;
       var cv = document.createElement('canvas');
       cv.width = Math.ceil((tw+pad*2)*dpr); cv.height = Math.ceil((th+pad*2)*dpr);
       var x = cv.getContext('2d'); x.scale(dpr,dpr);
       x.shadowColor = 'rgba(8,16,32,.5)'; x.shadowBlur = 2.5; x.shadowOffsetY = 1.2;
       rr(x,pad,pad,tw,th,2.4); x.fillStyle = 'hsl('+hue+','+sat+'%,'+(lit+9)+'%)'; x.fill();
       x.shadowColor = 'transparent';
-      /* the pooled body, inset from the edge */
+      /* the pooled body: a sharp face, deepening softly away from the pale edge break */
       x.save(); rr(x,pad,pad,tw,th,2.4); x.clip();
-      x.filter = 'blur(1.6px)';
-      rr(x,pad+2.4,pad+2,tw-4.8,th-4,2); x.fillStyle = 'hsl('+hue+','+sat+'%,'+lit+'%)'; x.fill();
-      x.filter = 'none';
+      rr(x,pad+1.6,pad+1.4,tw-3.2,th-2.8,1.8); x.fillStyle = 'hsl('+hue+','+sat+'%,'+(lit+3)+'%)'; x.fill();
+      var bg = x.createRadialGradient(pad+tw/2,pad+th/2,th*.15,pad+tw/2,pad+th/2,tw*.5);
+      bg.addColorStop(0,'hsla('+hue+','+sat+'%,'+(lit-3)+'%,1)'); bg.addColorStop(1,'hsla('+hue+','+sat+'%,'+(lit-3)+'%,0)');
+      x.fillStyle = bg; x.fillRect(pad+1.6,pad+1.4,tw-3.2,th-2.8);
       /* uneven pooling: a few soft darker and paler drifts per variant */
       for (var m = 0; m < 3; m++){
         var mx = pad + tw*(.15+R()*.7), my = pad + th*(.2+R()*.6), mr = th*(.35+R()*.5);
@@ -560,7 +561,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         if (s.oy > C.MAX_OFF) s.oy = C.MAX_OFF; if (s.oy < -C.MAX_OFF) s.oy = -C.MAX_OFF;
         if (Math.abs(s.ox) < .02 && Math.abs(s.vx) < .02 && Math.abs(s.oy) < .02 && Math.abs(s.vy) < .02){ s.ox = s.oy = s.vx = s.vy = 0; }
       }
-      if (now - s.t < 900 || now - s.rm < 260) busy = true;
+      if (now - s.t < 900 || now - s.rm < 80) busy = true;
     }
     if (!busy) return; /* nothing moved: keep the last frame, save the battery */
     this.dirty = false;
@@ -581,9 +582,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         var age = reduce ? 1e9 : now - t.t;
         if (age < 900){ sc *= 1 + .14*Math.exp(-age/120)*Math.cos(age/48); lift = -6*Math.exp(-age/80); }
       } else {
+        /* pulled off whole and solid, never faded */
         var ra = now - t.rm;
-        if (ra > 260 || reduce) continue;
-        a = 1 - ra/260; sc *= 1 + .06*ra/260; lift = -8*ra/260;
+        if (ra > 80 || reduce) continue;
+        sc *= 1 + .12*ra/80; lift = -12*ra/80;
       }
       x.globalAlpha = a;
       var w2 = (tw+pad*2)*sc, h2 = (th+pad*2)*sc;
