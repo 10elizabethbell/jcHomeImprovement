@@ -1,0 +1,38 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "border-top: 5px",
+        "createdAt": "2026-10-19T19:37:20.280Z",
+        "reason": "Claude: brass tile-edge trim on the tile-course dividers, the world's material, not a card side-tab"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T19:37:20.376Z",
+        "reason": "Claude: combed-thinset ridge texture (CSS fallback under the tile canvas), the world's material"
+      },
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-19T19:37:20.468Z",
+        "reason": "Ellie's pitch-site house style mandates the system font stack (ellie-taste.md section 2)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T19:37:20.566Z",
+        "reason": "Claude: hero wall canvas is full-bleed by design; service rows carry their own 12px padding under a separator rule"
+      }
+    ]
+  }
+}
