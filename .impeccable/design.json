@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T19:54:12.910180+00:00",
+  "title": "Design System: JC Home Improvement",
+  "extensions": {
+    "colorMeta": {
+      "glaze-navy": {
+        "role": "neutral",
+        "displayName": "Glaze Navy",
+        "canonical": "#172a47",
+        "oklch": "oklch(28.5% 0.059 258.6)",
+        "tonalRamp": [
+          "#020b1d",
+          "#16253c",
+          "#31435d",
+          "#4e6281",
+          "#6d84a6",
+          "#90a6c8",
+          "#b5cbeb",
+          "#dcf0ff"
+        ]
+      },
+      "glaze-navy-deep": {
+        "role": "neutral",
+        "displayName": "Glaze Navy, Deep Pool",
+        "canonical": "#122139",
+        "oklch": "oklch(24.8% 0.050 259.4)",
+        "tonalRamp": [
+          "#030b1a",
+          "#192539",
+          "#344359",
+          "#51627c",
+          "#7183a1",
+          "#94a6c3",
+          "#b9cae6",
+          "#dff0ff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#14213a",
+        "oklch": "oklch(25.0% 0.051 262.5)",
+        "tonalRamp": [
+          "#040a1b",
+          "#1a2539",
+          "#35425a",
+          "#53627d",
+          "#7283a1",
+          "#95a6c4",
+          "#bacae7",
+          "#e0efff"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink, Soft",
+        "canonical": "#44506a",
+        "oklch": "oklch(43.2% 0.046 265.3)",
+        "tonalRamp": [
+          "#050a19",
+          "#1c2537",
+          "#384258",
+          "#55617a",
+          "#75829f",
+          "#98a5c1",
+          "#bdc9e4",
+          "#e3efff"
+        ]
+      },
+      "on-navy": {
+        "role": "neutral",
+        "displayName": "Glaze Highlight",
+        "canonical": "#f3f6fa",
+        "oklch": "oklch(97.2% 0.006 255.5)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232527",
+          "#404245",
+          "#5f6165",
+          "#808286",
+          "#a3a5a9",
+          "#c7c9cd",
+          "#eceff2"
+        ]
+      },
+      "on-navy-soft": {
+        "role": "neutral",
+        "displayName": "Glaze Haze",
+        "canonical": "#c3cfe0",
+        "oklch": "oklch(85.1% 0.027 257.0)",
+        "tonalRamp": [
+          "#060b13",
+          "#1e2630",
+          "#3a434f",
+          "#586270",
+          "#788393",
+          "#9ba6b5",
+          "#c0cad9",
+          "#e6effd"
+        ]
+      },
+      "tile-body": {
+        "role": "neutral",
+        "displayName": "Tile Body",
+        "canonical": "#eef2f6",
+        "oklch": "oklch(95.9% 0.007 247.9)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232528",
+          "#404245",
+          "#5e6265",
+          "#7f8386",
+          "#a2a5a9",
+          "#c6c9cd",
+          "#eceff2"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "thinset": {
+        "role": "neutral",
+        "displayName": "Thinset Grey",
+        "canonical": "#a9a39a",
+        "oklch": "oklch(71.8% 0.015 78.2)",
+        "tonalRamp": [
+          "#0e0b07",
+          "#28241f",
+          "#46413b",
+          "#666059",
+          "#878179",
+          "#aaa49c",
+          "#cec8c0",
+          "#f3eee6"
+        ]
+      },
+      "bracket-gold": {
+        "role": "primary",
+        "displayName": "Bracket Gold",
+        "canonical": "#f2c624",
+        "oklch": "oklch(84.1% 0.165 91.7)",
+        "tonalRamp": [
+          "#1d0300",
+          "#3c1d00",
+          "#5d3b00",
+          "#815a00",
+          "#a67c00",
+          "#c8a000",
+          "#ebc64e",
+          "#ffec82"
+        ]
+      },
+      "bracket-gold-hover": {
+        "role": "primary",
+        "displayName": "Bracket Gold, Lit",
+        "canonical": "#ffd84a",
+        "oklch": "oklch(89.1% 0.159 93.2)",
+        "tonalRamp": [
+          "#1b0400",
+          "#3a1f00",
+          "#5b3c00",
+          "#7e5c00",
+          "#a37d00",
+          "#c5a203",
+          "#e7c755",
+          "#ffed88"
+        ]
+      },
+      "brass-mid": {
+        "role": "primary",
+        "displayName": "Brass Trim, Mid",
+        "canonical": "#b98f1c",
+        "oklch": "oklch(67.2% 0.130 86.2)",
+        "tonalRamp": [
+          "#1c0400",
+          "#3b1e00",
+          "#5c3b00",
+          "#7f5a00",
+          "#a47b00",
+          "#c69f40",
+          "#e9c470",
+          "#ffea9d"
+        ]
+      },
+      "brass-light": {
+        "role": "primary",
+        "displayName": "Brass Trim, Highlight",
+        "canonical": "#f4d465",
+        "oklch": "oklch(87.6% 0.135 93.4)",
+        "tonalRamp": [
+          "#190600",
+          "#372100",
+          "#573e00",
+          "#7a5e00",
+          "#9e7f00",
+          "#bfa33b",
+          "#e2c86c",
+          "#ffee9a"
+        ]
+      },
+      "brass-dark": {
+        "role": "primary",
+        "displayName": "Brass Trim, Shade",
+        "canonical": "#a07a12",
+        "oklch": "oklch(60.1% 0.118 85.6)",
+        "tonalRamp": [
+          "#1a0500",
+          "#391f00",
+          "#5a3c00",
+          "#7d5b00",
+          "#a27c17",
+          "#c4a04d",
+          "#e7c57a",
+          "#ffeba6"
+        ]
+      },
+      "focus-blue": {
+        "role": "secondary",
+        "displayName": "Focus Blue",
+        "canonical": "#2f7cf6",
+        "oklch": "oklch(60.7% 0.198 259.6)",
+        "tonalRamp": [
+          "#000046",
+          "#00156f",
+          "#00389a",
+          "#0e59c8",
+          "#307cf6",
+          "#5ba2ff",
+          "#85c9ff",
+          "#afefff"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Line",
+        "canonical": "#c4ccd7",
+        "oklch": "oklch(84.2% 0.018 256.3)",
+        "tonalRamp": [
+          "#080b11",
+          "#21252c",
+          "#3d424a",
+          "#5b626b",
+          "#7c838d",
+          "#9fa6af",
+          "#c3cad3",
+          "#e9eff8"
+        ]
+      },
+      "rule-line": {
+        "role": "neutral",
+        "displayName": "Rule Line",
+        "canonical": "#cfd7e1",
+        "oklch": "oklch(87.6% 0.016 253.9)",
+        "tonalRamp": [
+          "#080b10",
+          "#21252b",
+          "#3d434a",
+          "#5b626a",
+          "#7c838c",
+          "#9fa6af",
+          "#c3cad2",
+          "#e9eff7"
+        ]
+      },
+      "arrow-well": {
+        "role": "neutral",
+        "displayName": "Arrow Well",
+        "canonical": "#dfe5ec",
+        "oklch": "oklch(91.9% 0.012 252.1)",
+        "tonalRamp": [
+          "#090b0f",
+          "#222529",
+          "#3e4247",
+          "#5d6267",
+          "#7e8389",
+          "#a0a6ac",
+          "#c5cad0",
+          "#eaeff5"
+        ]
+      },
+      "error-red": {
+        "role": "neutral",
+        "displayName": "Error Red",
+        "canonical": "#b3261e",
+        "oklch": "oklch(50.1% 0.178 28.7)",
+        "tonalRamp": [
+          "#300000",
+          "#570000",
+          "#810102",
+          "#ac2b22",
+          "#d84c3f",
+          "#fb7767",
+          "#ffa08f",
+          "#ffc9b8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; uppercase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Every section h2; uppercase, 900."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step titles; sentence case, 800."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Paragraph under a section headline; max 34ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text and form input text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and legends; buttons use 800 at 17px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "set-tile",
+        "value": "inset 0 0 3px 1px rgba(110,140,190,.32), inset 0 -1px 0 rgba(4,10,24,.45), 0 1.2px 2.5px rgba(8,16,32,.45)",
+        "purpose": "Glaze glow, joint edge and drop onto thinset for every tile. Tiles only."
+      },
+      {
+        "name": "field-focus-halo",
+        "value": "0 0 0 3px rgba(47,124,246,.25)",
+        "purpose": "Focus halo on text inputs, textarea and select."
+      }
+    ],
+    "focusRing": {
+      "value": "3px solid #2f7cf6",
+      "offset": "3px",
+      "purpose": "Site-wide :focus-visible ring."
+    },
+    "borders": [
+      {
+        "name": "brass-trim",
+        "value": "6px solid; border-image: linear-gradient(180deg, #f4d465, #b98f1c 55%, #a07a12) 1",
+        "purpose": "Edge where a tile wall meets the page (5px on tile courses; 90deg on the desktop hero wall's left edge)."
+      },
+      {
+        "name": "control",
+        "value": "2px solid #c4ccd7",
+        "purpose": "Inputs, chips, copy button at rest."
+      },
+      {
+        "name": "hairline",
+        "value": "1px solid #cfd7e1",
+        "purpose": "Between service rows."
+      }
+    ],
+    "textures": [
+      {
+        "name": "combed-thinset",
+        "value": "#a9a39a with repeating-linear-gradient(180deg, rgba(255,255,255,.18) 0 2px, rgba(0,0,0,0) 2px 4px, rgba(60,55,48,.28) 4px 6px, rgba(0,0,0,0) 6px 8px)",
+        "purpose": "CSS fallback ground behind every tile wall and course; the canvas draws arced trowel ridges over it."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-set",
+        "value": "cubic-bezier(.34,1.56,.64,1)",
+        "purpose": "Overshoot for things being set: course tiles (.55s), selected chip (.42s)."
+      },
+      {
+        "name": "state",
+        "value": "150-180ms",
+        "purpose": "Colour and border transitions on buttons, fields, chips, arrow disc."
+      },
+      {
+        "name": "press",
+        "value": "translateY(1px), 120ms",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "course-stagger",
+        "value": "32ms per tile",
+        "purpose": "Course tiles lay left to right when 60% in view."
+      },
+      {
+        "name": "wall-constants",
+        "value": "C object at top of the 'Tile wall' script",
+        "purpose": "TILE_W 46 / TILE_W_DESK 60, GROUT 3, START_IDLE 900, AUTO_IDLE 2200, AUTO_EVERY 58, GROUT_MS 900, HOLD 4200, PASS_MS 520, LAY_R 0.8, PUSH_R 1.3, PUSH 1500, SPRING 38, DAMP 6.5, MAX_OFF 7, DPR_MAX 2."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Courses pre-laid, wall static at 90%, chip animation off, smooth scroll off."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-phone",
+        "value": "max-width 374px"
+      },
+      {
+        "name": "tablet",
+        "value": "700px"
+      },
+      {
+        "name": "desktop",
+        "value": "1024px"
+      }
+    ],
+    "container": {
+      "maxWidth": "1160px"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gold action: the one thing to do (free estimate, form submit).",
+      "html": "<a class=\"ds-btn ds-btn-gold\" href=\"#\">Get a free estimate</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:6px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid #f2c624;transition:background-color .18s,color .18s,transform .12s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:3px solid #2f7cf6;outline-offset:3px}.ds-btn-gold{background:#f2c624;color:#14213a}.ds-btn-gold:hover{background:#ffd84a}"
+    },
+    {
+      "name": "Outline Button on Navy",
+      "kind": "button",
+      "refersTo": "button-outline-on-navy",
+      "description": "Secondary channel (WhatsApp) beside the gold action on navy grounds.",
+      "html": "<div style=\"background:#172a47;padding:24px\"><a class=\"ds-btn-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4A8.4 8.4 0 1 1 20.5 11.6z\"/></svg>WhatsApp us</a></div>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:6px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;background:transparent;color:#f3f6fa;border:2px solid #c3cfe0;transition:border-color .18s,color .18s,transform .12s}.ds-btn-line:hover{border-color:#f2c624;color:#fff}.ds-btn-line:active{transform:translateY(1px)}.ds-btn-line:focus-visible{outline:3px solid #2f7cf6;outline-offset:3px}"
+    },
+    {
+      "name": "Navy Button",
+      "kind": "button",
+      "refersTo": "button-navy",
+      "description": "Outbound link on light grounds (See our work on Facebook).",
+      "html": "<a class=\"ds-btn-navy\" href=\"#\">See our work on Facebook</a>",
+      "css": ".ds-btn-navy{display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 22px;border-radius:6px;background:#172a47;color:#fff;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;transition:background-color .18s}.ds-btn-navy:hover{background:#22406b}.ds-btn-navy:focus-visible{outline:3px solid #2f7cf6;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Estimate form field with label; blue hover and focus.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-n\">Your town</label><input id=\"ds-n\" class=\"ds-input\" type=\"text\" placeholder=\"e.g. Bergenfield\"></div>",
+      "css": ".ds-field{display:grid;gap:8px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#14213a}.ds-field label{font-weight:800;font-size:16px}.ds-input{width:100%;box-sizing:border-box;font-family:inherit;font-size:17px;color:#14213a;background:#fff;border:2px solid #c4ccd7;border-radius:6px;padding:13px 14px;min-height:54px;transition:border-color .15s,box-shadow .15s}.ds-input:hover{border-color:#2f7cf6}.ds-input:focus{outline:none;border-color:#2f7cf6;box-shadow:0 0 0 3px rgba(47,124,246,.25)}"
+    },
+    {
+      "name": "Choice Chips",
+      "kind": "chip",
+      "refersTo": "chip-choice",
+      "description": "Radio choices; selected chip sets like a tile in navy.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-k\" checked><span>Remodel</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-k\"><span>Renovation</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-k\"><span>Not sure yet</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#14213a}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:4px;border:2px solid #c4ccd7;background:#fff;font-weight:700;font-size:17px;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}.ds-chip span:hover{border-color:#2f7cf6}.ds-chip input:focus-visible+span{outline:3px solid #2f7cf6;outline-offset:2px;border-color:#2f7cf6}.ds-chip input:checked+span{background:#172a47;border-color:#172a47;color:#fff;animation:ds-set .42s cubic-bezier(.34,1.56,.64,1)}.ds-chip input:checked+span:hover{border-color:#2f7cf6}@keyframes ds-set{0%{transform:translateY(-5px) scale(1.08)}100%{transform:none}}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "White bar: logo left, tap-to-call number right. No menu.",
+      "html": "<header class=\"ds-top\"><span class=\"ds-logo\">JC Home Improvement</span><a class=\"ds-tel\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z\"/></svg>(201) 838-5000</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:8px 16px;background:#fff;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-logo{font-weight:500;color:#14213a;border-bottom:3px solid #f2c624}.ds-tel{display:inline-flex;align-items:center;gap:7px;min-height:44px;font-weight:800;font-size:15.5px;color:#14213a;text-decoration:none;font-variant-numeric:tabular-nums}.ds-tel svg{color:#172a47}.ds-tel:hover{text-decoration:underline}.ds-tel:focus-visible{outline:3px solid #2f7cf6;outline-offset:3px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row-arrow",
+      "description": "Large list link; only the arrow disc changes on hover (gold).",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">General construction<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Remodeling<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows{list-style:none;margin:0;padding:0;border-top:1px solid #cfd7e1;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#14213a}.ds-rows li{border-bottom:1px solid #cfd7e1}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:12px 0;text-decoration:none;color:inherit;font-weight:800;font-size:24px;letter-spacing:-.01em}.ds-arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#dfe5ec;color:#14213a;transition:background-color .18s}.ds-row:hover,.ds-row:focus-visible{outline:none}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:#f2c624}.ds-row:focus-visible .ds-arrow{outline:3px solid #2f7cf6;outline-offset:3px}"
+    },
+    {
+      "name": "Tile Course",
+      "kind": "custom",
+      "refersTo": "tile-course",
+      "description": "Signature divider between bands: one running-bond course on thinset under a brass edge.",
+      "html": "<div class=\"ds-course\"><i style=\"--g:#1b3155\"></i><i style=\"--g:#23406b\"></i><i style=\"--g:#182c4d\"></i><i style=\"--g:#1e365e\"></i><i style=\"--g:#172a48\"></i><i style=\"--g:#213a63\"></i><i style=\"--g:#1a3052\"></i><i style=\"--g:#1d3359\"></i></div>",
+      "css": ".ds-course{display:flex;gap:3px;padding:3px 0;overflow:hidden;background-color:#a9a39a;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.18) 0 2px,rgba(0,0,0,0) 2px 4px,rgba(60,55,48,.28) 4px 6px,rgba(0,0,0,0) 6px 8px);border-top:5px solid #b98f1c;border-image:linear-gradient(180deg,#f4d465,#b98f1c 55%,#a07a12) 1;height:41px}.ds-course i{flex:0 0 60px;height:30px;border-radius:2.5px;background:var(--g,#1b3155);box-shadow:inset 0 0 3px 1px rgba(110,140,190,.32),inset 0 -1px 0 rgba(4,10,24,.45),0 1.2px 2.5px rgba(8,16,32,.45)}.ds-course i:first-child{margin-left:-30px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Wall Going Up",
+    "overview": "The page is a wall the crew is tiling. Navy handmade-glaze subway tiles in running bond go down over grey notched-trowel thinset, edged with brass trim that is the logo's gold bracket made physical. Everything else on the page is the room around that wall: cool white tile-body sections, navy glazed sections, and heavy uppercase type that reads like a sign painted on a job-site van.\n\nThe surface is phone-first and plain-spoken. Sections are full-bleed bands that alternate tile-body white and glaze navy, stitched together by single courses of tile that lay themselves when scrolled to. Depth, texture and motion live inside the tile world (the live wall canvas and the course dividers); the interface around it is flat, solid and quiet so the one primary action never competes.\n\nThe world rejects the stock-kitchen-photo contractor template: no photography of finished rooms, no fake job gallery. The material itself is the imagery.",
+    "keyCharacteristics": [
+      "Navy glaze, cool white tile body, grey thinset, brass trim; nothing else carries colour except the gold action.",
+      "Heavy uppercase system type (900 weight) for every section headline.",
+      "Full-bleed alternating bands joined by self-laying tile courses with a brass top edge.",
+      "Flat UI, textured world: shadows and grain exist only on tiles, thinset and the trowel.",
+      "One live, touchable tile wall as the signature (hero, and a shorter strip above the footer)."
+    ],
+    "rules": [
+      {
+        "name": "The Bracket Rule",
+        "body": "Gold marks what you can act on and the brass trim; it is never a background for a section or a decorative fill. In the build it appears on the primary buttons, the trim gradient, the service-row arrow on hover, link hover on navy (phone numbers, footer links), the text selection and skip link, and the three step numerals on navy (the one static use).",
+        "section": "colors"
+      },
+      {
+        "name": "The No Black Ground Rule",
+        "body": "No section ground is black. The darkest surface is glaze-navy-deep in the footer. Black survives only as the logo's own line art.",
+        "section": "colors"
+      },
+      {
+        "name": "The Separate Signals Rule",
+        "body": "Gold says \"do this\"; blue says \"you are here\". Focus and form-control hover use Focus Blue, never gold.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sign-Painter Rule",
+        "body": "Headlines are uppercase, weight 900, negatively tracked. Everything below headline level is sentence case at 800 or 400; no uppercase labels, no letter-spaced small caps.",
+        "section": "typography"
+      },
+      {
+        "name": "The Weight Ladder Rule",
+        "body": "Three weights only: 900 (headlines, numerals), 800 (titles, labels, buttons, service rows, phone links), 400 body. 700 is reserved for chips and inline note links; 600 for error text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Room, Physical Wall Rule",
+        "body": "UI elements never cast shadows. Only tiles, thinset and tools do, because they are objects in the world.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put the gold only on the primary action, the brass trim, and hover signals of actionable things.",
+      "**Do** set every section headline uppercase at weight 900 with negative tracking, in the system stack.",
+      "**Do** alternate tile-body and glaze-navy bands and join them with a tile course under a brass edge.",
+      "**Do** use Focus Blue (3px ring, 3px offset) for keyboard focus everywhere and for form-control hover and focus.",
+      "**Do** keep tap targets at 44px minimum; primary buttons at 56px.",
+      "**Do** keep texture, grain and shadow inside the tile world (tiles, thinset, trowel).",
+      "**Do** tune the wall through the constants at the top of the \"Tile wall\" script, not by editing the drawing code.",
+      "**Do** honour prefers-reduced-motion: courses pre-laid, wall static, no chip animation."
+    ],
+    "donts": [
+      "**Don't** use a black ground anywhere; glaze-navy-deep is the floor.",
+      "**Don't** use gold for focus, for section fills, or for decorative text beyond the step numerals.",
+      "**Don't** change a service row's background, underline or shadow on hover; only the arrow disc changes.",
+      "**Don't** add shadows, blur or lifted cards to UI elements.",
+      "**Don't** add stock photography of finished rooms or kitchens; the tile material is the imagery.",
+      "**Don't** fade tiles in or out on the wall; tiles are set and pulled off whole."
+    ]
+  }
+}

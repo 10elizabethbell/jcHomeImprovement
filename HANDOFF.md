@@ -25,6 +25,7 @@
   - Blue (#2f7cf6) as the form hover/focus outline.
 - **Copy:** in "we" voice (a company with a crew). "We'll go over the job with you", "without cutting corners in your home" and "We treat your home like it's our own" are written attitude lines, not facts from them. Check the tone with the owner.
 - **Their kitchen photo is not used.** The flyer's kitchen photo looks like a stock or AI render, not their job.
+- **Audience:** treated as general homeowners, not specifically 40+, so the moving tile wall stays. The brief doesn't say who their customers are. If they skew 40+, `references/older-audience.md` applies: make the wall a still picture and shorten the page.
 - **Services:** only what they list: General construction, Remodeling, Renovation. No kitchens, baths and so on, because they haven't said so.
 
 ## Placeholders and gaps
@@ -48,6 +49,12 @@
 - A "Send us a photo of the space" step (WhatsApp makes that easy).
 - Spanish version (Bergenfield has a large Spanish-speaking population). Only if the owner wants it.
 - Grout colour picked by the visitor, or the hero tile colour changing with the project type.
+
+## Review status
+- The finish reviewer ran two rounds, the limit for an unattended build.
+  - **Round 1 (fix):** 8 items.
+  - **Round 2:** 6 of the 8 resolved. Still open: tile glaze (partial) and HANDOFF/Pages (unresolved), plus one regression, see-through tiles during the trowel pass.
+- After round 2 I fixed all three: crisp tile faces, colour drift held to navy, tiles lifted off solid in about 80ms instead of fading. HANDOFF.md is written, and the repo and Pages are checked. The reviewer has **not** re-scored these, so judge the tile look and the trowel pass by eye.
 
 ## Not verified
 - Real-device touch on iPhone and Android, including inside Facebook's in-app browser. It was simulated in Playwright WebKit and Chromium.
