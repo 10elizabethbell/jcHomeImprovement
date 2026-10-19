@@ -35,6 +35,84 @@
         ],
         "createdAt": "2026-10-19T19:39:40.665Z",
         "reason": "Claude: the only 5-6px one-sided borders are brass tile-edge trim on the tile courses and hero wall (the world's material, not card side-tabs); side-tab has no value-level matcher"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14.5px",
+        "createdAt": "2026-10-19T19:55:44.113Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "createdAt": "2026-10-19T19:55:44.229Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.6rem",
+        "createdAt": "2026-10-19T19:55:44.334Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "54px",
+        "createdAt": "2026-10-19T19:55:44.419Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2.6rem",
+        "createdAt": "2026-10-19T19:55:44.507Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "15px",
+        "createdAt": "2026-10-19T19:55:44.581Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2.2rem",
+        "createdAt": "2026-10-19T19:55:44.658Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "5rem",
+        "createdAt": "2026-10-19T19:55:44.729Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "24px",
+        "createdAt": "2026-10-19T19:55:44.807Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "34px",
+        "createdAt": "2026-10-19T19:55:44.880Z",
+        "reason": "Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(60,55,48,.28)",
+        "createdAt": "2026-10-19T19:55:44.966Z",
+        "reason": "Claude: thinset ridge shadow in the combed-mortar texture; Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1b3155",
+        "createdAt": "2026-10-19T19:55:45.070Z",
+        "reason": "Claude: divider tile default glaze (navy glaze family); Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#22406b",
+        "createdAt": "2026-10-19T19:55:45.177Z",
+        "reason": "Claude: Facebook button hover, one step up the glaze navy; Claude: shipped build value DESIGN.md's ramp/palette omitted (documenter undercount), not drift"
       }
     ]
   }
