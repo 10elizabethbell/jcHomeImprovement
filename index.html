@@ -81,6 +81,7 @@ p{margin:0}
   background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.18) 0 2px,rgba(0,0,0,0) 2px 4px,rgba(60,55,48,.28) 4px 6px,rgba(0,0,0,0) 6px 8px)}
 .wall canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:crosshair}
 @media (min-width:1024px){
+  .hero .pitch{max-width:none}
   .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:min(calc(100svh - 84px),860px)}
   .hero-copy{padding:clamp(56px,9vh,110px) 48px 64px max(var(--pad),calc((100vw - 1160px)/2 + var(--pad)));align-self:center}
   .actions{grid-auto-flow:column;justify-content:start;margin-top:34px}
@@ -92,18 +93,17 @@ p{margin:0}
   background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.18) 0 2px,rgba(0,0,0,0) 2px 4px,rgba(60,55,48,.28) 4px 6px,rgba(0,0,0,0) 6px 8px);
   border-top:5px solid var(--brass-1);border-image:linear-gradient(180deg,var(--brass-2),var(--brass-1) 55%,var(--brass-3)) 1;height:calc(var(--th) + 2*var(--grout) + 5px)}
 .course i{flex:0 0 var(--tw);height:var(--th);border-radius:2.5px;background:var(--g,#1b3155);
-  background-image:radial-gradient(ellipse at 50% 45%,rgba(255,255,255,.05) 0,rgba(0,0,0,0) 45%,rgba(0,0,0,.2) 100%),linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.12));
-  box-shadow:0 1.2px 2.5px rgba(8,16,32,.45);opacity:0;transform:translateY(-12px) scale(1.16)}
+  box-shadow:inset 0 0 3px 1px rgba(110,140,190,.32),inset 0 -1px 0 rgba(4,10,24,.45),0 1.2px 2.5px rgba(8,16,32,.45);opacity:0;transform:translateY(-12px) scale(1.16)}
 .course i:first-child{margin-left:calc(var(--tw) / -2)}
 .course.laid i{opacity:1;transform:none;transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .14s linear;transition-delay:var(--d,0ms)}
 
 /* ---------- light sections ---------- */
 .band{padding:64px 0}
 .band-light{background:var(--light)}
-.band-white{background:var(--white)}
 .band-navy{background:var(--navy);color:var(--on-navy)}
 @media (min-width:700px){ .band{padding:104px 0} }
-.lede{font-size:clamp(18px,4.8vw,22px);line-height:1.5;margin-top:18px;max-width:34ch;color:var(--ink-soft)}
+.lede{font-size:clamp(18px,4.8vw,22px);line-height:1.5;margin-top:18px;max-width:34ch;color:var(--ink-soft);text-wrap:pretty}
+.h-sub{font-size:clamp(1.3rem,4.5vw,1.6rem)}
 .band-navy .lede{color:var(--on-navy-soft)}
 
 /* promise + services */
@@ -132,6 +132,15 @@ p{margin:0}
 .fb:hover{background:#22406b}
 @media (max-width:699px){ .fb{display:flex;justify-content:center} }
 
+/* licensed + estimate share one band */
+.est-grid{display:grid;gap:64px}
+@media (min-width:1024px){
+  .est-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:80px;align-items:start}
+  .est{grid-column:1;grid-row:1}
+  .local{grid-column:2;grid-row:1;position:sticky;top:32px;padding-top:6px}
+  .local h2{font-size:clamp(1.9rem,3vw,2.6rem)}
+}
+
 /* ---------- estimate form ---------- */
 .form{margin-top:30px;display:grid;gap:22px;max-width:640px}
 .field{display:grid;gap:8px}
@@ -154,6 +163,7 @@ input[type=text]:focus,textarea:focus,select:focus{outline:none;border-color:var
 .err{color:#b3261e;font-size:15px;font-weight:600;min-height:0}
 .err:empty{display:none}
 .invalid{border-color:#b3261e!important}
+.chips.invalid .chip span{border-color:#b3261e}
 .send{width:100%;border:2px solid var(--gold)}
 .send:hover{border-color:var(--focus)}
 .send:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
@@ -233,7 +243,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <p class="lede">Show us the price another contractor gave you. We'll go over the job with you, give you our estimate for free, and come in lower, without cutting corners in your home.</p>
     </div>
     <div>
-      <h2 id="services-title">What we do</h2>
+      <h2 id="services-title" class="h-sub">What we do</h2>
       <ul class="rows" aria-labelledby="services-title">
         <li><a class="row" href="#estimate" data-pick="Construction">General construction<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
         <li><a class="row" href="#estimate" data-pick="Remodel">Remodeling<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
@@ -250,24 +260,22 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <h2 id="how-title">How it works</h2>
     <ol class="steps">
       <li><span class="n" aria-hidden="true">1</span><h3>Tell us what you have in mind</h3><p>Text, WhatsApp or call. A photo of the space helps.</p></li>
-      <li><span class="n" aria-hidden="true">2</span><h3>Free estimate</h3><p>We go over the job and give you a price. Have another quote? We'll beat it.</p></li>
-      <li><span class="n" aria-hidden="true">3</span><h3>We build it</h3><p>Good work at a price that's easy on your pocket.</p></li>
+      <li><span class="n" aria-hidden="true">2</span><h3>Free estimate</h3><p>We go over the job with you and give you a price, free.</p></li>
+      <li><span class="n" aria-hidden="true">3</span><h3>We build it</h3><p>We treat your home like it's our own, and keep the price easy on your pocket.</p></li>
     </ol>
   </div>
 </section>
 
 <div class="course" aria-hidden="true"></div>
 
-<section class="band band-white" aria-labelledby="local-title">
-  <div class="wrap">
+<section class="band band-light" aria-labelledby="estimate-title">
+  <div class="wrap est-grid">
+    <div class="local">
     <h2 id="local-title">Licensed and local</h2>
     <p class="lede">We're a state-licensed general construction company based right here in Bergenfield, New Jersey.</p>
-    <a class="fb" href="https://www.facebook.com/profile.php?id=100080951704352" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg>See more of our work on Facebook</a>
-  </div>
-</section>
-
-<section class="band band-light" id="estimate" aria-labelledby="estimate-title">
-  <div class="wrap">
+    <a class="fb" href="https://www.facebook.com/profile.php?id=100080951704352" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg>See our work on Facebook</a>
+    </div>
+    <div class="est" id="estimate">
     <h2 id="estimate-title">Get a free estimate</h2>
     <form class="form" id="quote" novalidate>
       <div class="field">
@@ -313,6 +321,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <button class="btn copy" type="button" id="copy">Copy message</button>
       </div>
     </form>
+    </div>
   </div>
 </section>
 
@@ -335,8 +344,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <div><strong>JC Home Improvement LLC</strong><br>General Construction · Bergenfield, NJ</div>
     <ul>
-      <li><a href="tel:+12018385000">(201) 838-5000</a></li>
-      <li><a href="tel:+12016818900">(201) 681-8900</a></li>
       <li><a href="mailto:jcgchomeimprovement@outlook.com">jcgchomeimprovement@outlook.com</a></li>
     </ul>
     <ul>
@@ -355,25 +362,29 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     START_IDLE: 900,               /* ms before the self-tiler starts on load */
     AUTO_IDLE: 2200,               /* ms after the last touch before it takes over again */
     AUTO_EVERY: 58,                /* ms between tiles when it tiles by itself */
-    HOLD: 4200,                    /* ms a finished wall stays before the trowel resets it */
-    SWEEP_MS: 1700,                /* trowel pass across the wall */
+    GROUT_MS: 900,                 /* a full wall gets grouted over this long */
+    HOLD: 4200,                    /* ms the grouted wall stays before the trowel resets it */
+    PASS_MS: 520,                  /* one trowel pass across the wall (it combs top to bottom) */
     LAY_R: 0.8,                    /* finger lays tiles within this many tile widths */
     PUSH_R: 1.3,                   /* and nudges set tiles within this many */
     PUSH: 1500, SPRING: 38, DAMP: 6.5, MAX_OFF: 7,
-    DPR_MAX: 1.5
+    DPR_MAX: 2
   };
-  var GLAZES = ['#1b3155','#1e365e','#182c4d','#213a63','#1a3052','#23406b','#172a48','#1d3359'];
+  var BASE = [[216,46,22],[214,50,25],[218,44,19],[212,48,28],[220,42,21],[215,52,23]]; /* navy glaze, hsl */
+  var VARIANTS = 12;
+  var THINSET = [143,138,130], GROUT = [214,218,223];
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var walls = [];
 
   function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
   function rand(seed){return function(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};}
+  function mix(a,b,t){return 'rgb('+Math.round(a[0]+(b[0]-a[0])*t)+','+Math.round(a[1]+(b[1]-a[1])*t)+','+Math.round(a[2]+(b[2]-a[2])*t)+')';}
 
   function Wall(canvas){
     this.c = canvas; this.ctx = canvas.getContext('2d');
     this.fill = parseFloat(canvas.getAttribute('data-fill')) || 0.4;
-    this.w = 0; this.h = 0; this.tiles = []; this.visible = true;
-    this.ptr = {on:false,x:0,y:0,lx:null,ly:null,vx:0,vy:0,moved:false};
+    this.w = 0; this.h = 0; this.tiles = []; this.visible = true; this.dirty = true;
+    this.ptr = {on:false,lx:null,ly:null,moved:false};
     this.lastUser = -1e9; this.lastAuto = 0; this.fullAt = 0; this.sweep = -1; this.born = performance.now();
     var self = this, p = this.ptr;
     function at(e){p.cx=e.clientX;p.cy=e.clientY;p.moved=true;self.lastUser=performance.now();self.sweep=-1;self.fullAt=0;}
@@ -389,43 +400,52 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   Wall.prototype.build = function(){
     var r = this.c.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height);
     if (!w || !h || (w === this.w && h === this.h)) return;
-    var keep = this.tiles.length ? this.tiles.filter(function(t){return t.on;}).length / this.tiles.length : this.fill;
-    this.w = w; this.h = h;
+    var keep = this.tiles.length ? this.tiles.filter(function(t){return t.on;}).length / this.tiles.length : (reduce ? 0.9 : this.fill);
+    this.w = w; this.h = h; this.dirty = true;
     var dpr = this.dpr = Math.min(window.devicePixelRatio || 1, C.DPR_MAX);
     this.c.width = Math.round(w*dpr); this.c.height = Math.round(h*dpr);
     var tw = this.tw = (window.innerWidth < 700 ? C.TILE_W : C.TILE_W_DESK), th = this.th = tw/2, g = C.GROUT;
+    this.band = (th+g)*4;
     this.makeSprites(); this.makeMortar();
     var tiles = [], rows = Math.ceil(h/(th+g)) + 1, R = rand(7);
     for (var row = 0; row < rows; row++){
       var y = h - (row+1)*(th+g) + g, x = (row%2) ? -(tw+g)/2 : 0;
       for (; x < w; x += tw+g){
-        tiles.push({x:x,y:y,cx:x+tw/2,cy:y+th/2,s:Math.floor(R()*GLAZES.length),on:false,t:-1e9,rm:-1e9,ox:0,oy:0,vx:0,vy:0});
+        /* handmade: each tile sits a hair off and is a hair off-size */
+        tiles.push({x:x,y:y,cx:x+tw/2+(R()-.5)*.9,cy:y+th/2+(R()-.5)*.7,k:.985+R()*.02,s:Math.floor(R()*VARIANTS),on:false,t:-1e9,rm:-1e9,ox:0,oy:0,vx:0,vy:0});
       }
     }
     var n = Math.round(tiles.length*keep);
     for (var i = 0; i < n; i++) tiles[i].on = true;
     this.tiles = tiles; this.next = n; this.sweep = -1; this.fullAt = 0;
-    this.trowel = null;
   };
 
+  /* glazed ceramic: glaze breaks thin and pale over the rounded edge, pools deeper across the face */
   Wall.prototype.makeSprites = function(){
-    var dpr = this.dpr, tw = this.tw, th = this.th, pad = 5;
+    var dpr = this.dpr, tw = this.tw, th = this.th, pad = 5, R = rand(29);
     this.pad = pad; this.sprites = [];
-    for (var i = 0; i < GLAZES.length; i++){
+    for (var i = 0; i < VARIANTS; i++){
+      var b = BASE[i % BASE.length], hue = b[0] + (R()-.5)*4, sat = b[1] + (R()-.5)*8, lit = b[2] + (R()-.5)*5;
       var cv = document.createElement('canvas');
       cv.width = Math.ceil((tw+pad*2)*dpr); cv.height = Math.ceil((th+pad*2)*dpr);
       var x = cv.getContext('2d'); x.scale(dpr,dpr);
-      x.shadowColor = 'rgba(8,16,32,.5)'; x.shadowBlur = 3; x.shadowOffsetY = 1.3;
-      rr(x,pad,pad,tw,th,2.6); x.fillStyle = GLAZES[i]; x.fill();
+      x.shadowColor = 'rgba(8,16,32,.5)'; x.shadowBlur = 2.5; x.shadowOffsetY = 1.2;
+      rr(x,pad,pad,tw,th,2.4); x.fillStyle = 'hsl('+hue+','+sat+'%,'+(lit+9)+'%)'; x.fill();
       x.shadowColor = 'transparent';
-      x.save(); rr(x,pad,pad,tw,th,2.6); x.clip();
-      /* glaze pools darker toward the edges, thinner and lighter in the middle */
-      var rg = x.createRadialGradient(pad+tw*.5,pad+th*.42,th*.2,pad+tw*.5,pad+th*.5,tw*.62);
-      rg.addColorStop(0,'rgba(120,150,200,'+(.07+.05*(i%3))+')'); rg.addColorStop(.55,'rgba(0,0,0,0)'); rg.addColorStop(1,'rgba(4,10,24,.32)');
-      x.fillStyle = rg; x.fillRect(pad,pad,tw,th);
-      var lg = x.createLinearGradient(0,pad,0,pad+th);
-      lg.addColorStop(0,'rgba(255,255,255,.04)'); lg.addColorStop(1,'rgba(0,0,0,.14)');
-      x.fillStyle = lg; x.fillRect(pad,pad,tw,th);
+      /* the pooled body, inset from the edge */
+      x.save(); rr(x,pad,pad,tw,th,2.4); x.clip();
+      x.filter = 'blur(1.6px)';
+      rr(x,pad+2.4,pad+2,tw-4.8,th-4,2); x.fillStyle = 'hsl('+hue+','+sat+'%,'+lit+'%)'; x.fill();
+      x.filter = 'none';
+      /* uneven pooling: a few soft darker and paler drifts per variant */
+      for (var m = 0; m < 3; m++){
+        var mx = pad + tw*(.15+R()*.7), my = pad + th*(.2+R()*.6), mr = th*(.35+R()*.5);
+        var mg = x.createRadialGradient(mx,my,0,mx,my,mr);
+        mg.addColorStop(0, R() < .6 ? 'rgba(6,14,32,.22)' : 'rgba(120,150,200,.12)'); mg.addColorStop(1,'rgba(0,0,0,0)');
+        x.fillStyle = mg; x.fillRect(pad,pad,tw,th);
+      }
+      /* the joint-side edge, crisp */
+      x.fillStyle = 'rgba(4,10,24,.45)'; x.fillRect(pad, pad+th-1, tw, 1);
       x.restore();
       this.sprites.push(cv);
     }
@@ -443,9 +463,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       x.fillStyle = g; x.fillRect(0,0,w,h);
     }
     /* notched-trowel ridges: each pass combed in its own arc */
-    var band = (th+C.GROUT)*4, sp = Math.max(5, th*.3);
-    for (var top = -band*.3; top < h; top += band*.82){
-      var ph = R()*6.28, ph2 = R()*6.28, A = band*(.07+R()*.09), dir = R() < .5 ? 1 : -1;
+    var band = this.band, sp = Math.max(5, th*.3);
+    for (var top = 0; top < h; top += band){
+      var ph = R()*6.28, ph2 = R()*6.28, A = band*(.05+R()*.07), dir = R() < .5 ? 1 : -1;
       x.save(); x.beginPath(); x.rect(0,top,w,band); x.clip();
       for (var y0 = top - A*2; y0 < top + band + A*2; y0 += sp){
         for (var pass = 0; pass < 2; pass++){
@@ -485,7 +505,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   Wall.prototype.step = function(now, dt){
     this.build();
     if (!this.w) return;
-    var p = this.ptr, ts = this.tiles, tw = this.tw;
+    var p = this.ptr, ts = this.tiles, tw = this.tw, busy = this.dirty;
     /* read the rect every frame: the page scrolls under the finger */
     if (p.on && p.moved){
       var r = this.c.getBoundingClientRect(), px = p.cx - r.left, py = p.cy - r.top;
@@ -493,7 +513,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       var dx = px - p.lx, dy = py - p.ly, dist = Math.sqrt(dx*dx+dy*dy), n = Math.max(1, Math.ceil(dist/(tw*.3)));
       var dvx = dx/Math.max(dt,.008), dvy = dy/Math.max(dt,.008);
       for (var k = 1; k <= n; k++) this.touch(p.lx + dx*k/n, p.ly + dy*k/n, now, dvx, dvy);
-      p.lx = px; p.ly = py; p.moved = false;
+      p.lx = px; p.ly = py; p.moved = false; busy = true;
     }
     /* the self-tiler: bottom course first, left to right, like a real setter */
     var idle = now - Math.max(this.lastUser, this.born - C.AUTO_IDLE + C.START_IDLE);
@@ -505,68 +525,91 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           for (var j = 0; j < ts.length && ts[j].on; j++);
           if (j < ts.length) this.next = j;
           else if (!this.fullAt) this.fullAt = now;
-          else if (now - this.fullAt > C.HOLD){ this.sweep = now; }
+          else if (now - this.fullAt > C.GROUT_MS + C.HOLD){ this.sweep = now; }
         }
       }
     }
-    /* trowel pass: lift the tiles, comb fresh ridges, start over */
-    var sx = -1e9;
+    /* grout goes in once every tile is set */
+    var gr = 0;
+    if (this.fullAt){ gr = Math.min(1, (now - this.fullAt)/C.GROUT_MS); if (gr < 1) busy = true; }
+    /* trowel: lifts the tiles and combs fresh thinset, one pass per band, top to bottom */
+    var tro = null;
     if (this.sweep >= 0){
-      var q = (now - this.sweep)/C.SWEEP_MS, e = q < .5 ? 2*q*q : 1 - Math.pow(-2*q+2,2)/2;
-      sx = -tw + e*(this.w + tw*2);
-      for (var i = 0; i < ts.length; i++){ var t = ts[i]; if (t.on && t.cx < sx + tw*.7){ t.on = false; t.rm = now; } }
+      busy = true;
+      var passes = Math.ceil(this.h/this.band), q = (now - this.sweep)/(C.PASS_MS*passes);
       if (q >= 1){ this.sweep = -1; this.next = 0; this.fullAt = 0; this.lastAuto = now + 500; }
+      else {
+        var pi = Math.floor(q*passes), u = q*passes - pi, e = u < .5 ? 2*u*u : 1 - Math.pow(-2*u+2,2)/2;
+        var bw = tw*2.3, top = pi*this.band, tx = -bw + e*(this.w + bw*2);
+        tro = {x:tx, y:top + this.band/2, w:bw, h:this.band*.92};
+        for (var i = 0; i < ts.length; i++){
+          var t = ts[i]; if (!t.on) continue;
+          var bi = Math.floor(t.y/this.band);
+          if (bi < pi || (bi === pi && t.cx < tx + bw*.5)){ t.on = false; t.rm = now; }
+        }
+      }
     }
     /* springs */
     for (var i2 = 0; i2 < ts.length; i2++){
       var s = ts[i2];
       if (s.ox || s.oy || s.vx || s.vy){
+        busy = true;
         s.vx += (-C.SPRING*s.ox - C.DAMP*s.vx)*dt; s.vy += (-C.SPRING*s.oy - C.DAMP*s.vy)*dt;
         s.ox += s.vx*dt; s.oy += s.vy*dt;
         if (s.ox > C.MAX_OFF) s.ox = C.MAX_OFF; if (s.ox < -C.MAX_OFF) s.ox = -C.MAX_OFF;
         if (s.oy > C.MAX_OFF) s.oy = C.MAX_OFF; if (s.oy < -C.MAX_OFF) s.oy = -C.MAX_OFF;
         if (Math.abs(s.ox) < .02 && Math.abs(s.vx) < .02 && Math.abs(s.oy) < .02 && Math.abs(s.vy) < .02){ s.ox = s.oy = s.vx = s.vy = 0; }
       }
+      if (now - s.t < 900 || now - s.rm < 260) busy = true;
     }
-    this.draw(now, sx);
+    if (!busy) return; /* nothing moved: keep the last frame, save the battery */
+    this.dirty = false;
+    this.draw(now, gr, tro);
   };
 
-  Wall.prototype.draw = function(now, sx){
-    var x = this.ctx, dpr = this.dpr, tw = this.tw, th = this.th, pad = this.pad, ts = this.tiles;
+  Wall.prototype.draw = function(now, gr, tro){
+    var x = this.ctx, dpr = this.dpr, tw = this.tw, th = this.th, pad = this.pad, ts = this.tiles, g = C.GROUT, i, t;
     x.setTransform(1,0,0,1,0,0);
     x.drawImage(this.mortar, 0, 0);
     x.setTransform(dpr,0,0,dpr,0,0);
-    for (var i = 0; i < ts.length; i++){
-      var t = ts[i], a = 1, sc = 1, lift = 0;
+    /* joints under set tiles: thinset squeezed flat, then grout */
+    x.fillStyle = mix(THINSET, GROUT, gr);
+    for (i = 0; i < ts.length; i++){ t = ts[i]; if (t.on && now - t.t > 120) x.fillRect(t.x - g, t.y - g, tw + g*2, th + g*2); }
+    for (i = 0; i < ts.length; i++){
+      t = ts[i]; var sc = t.k, lift = 0, a = 1;
       if (t.on){
         var age = reduce ? 1e9 : now - t.t;
-        if (age < 900){ a = Math.min(1, age/70); sc = 1 + .17*Math.exp(-age/120)*Math.cos(age/48); lift = -7*Math.exp(-age/80); }
+        if (age < 900){ sc *= 1 + .14*Math.exp(-age/120)*Math.cos(age/48); lift = -6*Math.exp(-age/80); }
       } else {
         var ra = now - t.rm;
         if (ra > 260 || reduce) continue;
-        a = 1 - ra/260; sc = 1 + .07*ra/260; lift = -9*ra/260;
+        a = 1 - ra/260; sc *= 1 + .06*ra/260; lift = -8*ra/260;
       }
       x.globalAlpha = a;
       var w2 = (tw+pad*2)*sc, h2 = (th+pad*2)*sc;
       x.drawImage(this.sprites[t.s], t.cx + t.ox - w2/2, t.cy + t.oy + lift - h2/2, w2, h2);
     }
     x.globalAlpha = 1;
-    if (sx > -tw) this.drawTrowel(x, sx);
+    if (tro) this.drawTrowel(x, tro);
   };
 
-  /* a steel notched trowel seen edge-on, teeth trailing the ridges they comb */
-  Wall.prototype.drawTrowel = function(x, sx){
-    var h = this.h, sp = Math.max(5, this.th*.3);
-    var bulge = x.createLinearGradient(sx, 0, sx+22, 0);
-    bulge.addColorStop(0,'rgba(95,88,78,.55)'); bulge.addColorStop(1,'rgba(95,88,78,0)');
-    x.fillStyle = bulge; x.fillRect(sx+6, 0, 22, h);
-    x.save(); x.translate(sx, 0); x.rotate(-0.035);
-    var g = x.createLinearGradient(-8,0,8,0);
-    g.addColorStop(0,'#69717c'); g.addColorStop(.45,'#c7ced6'); g.addColorStop(1,'#7d858f');
-    x.fillStyle = g; x.shadowColor = 'rgba(10,18,32,.45)'; x.shadowBlur = 8; x.shadowOffsetX = 3;
-    x.fillRect(-7, -20, 14, h+40);
-    x.shadowColor = 'transparent'; x.fillStyle = '#a9a39a';
-    for (var y = -20; y < h+20; y += sp*2) x.fillRect(-7, y, 4, sp);
+  /* a steel notched trowel seen from the back: blade, notched trailing edge, wooden handle */
+  Wall.prototype.drawTrowel = function(x, T){
+    var sp = Math.max(5, this.th*.3), l = T.x - T.w/2, tp = T.y - T.h/2;
+    x.save(); x.translate(T.x, T.y); x.rotate(-0.06); x.translate(-T.x, -T.y);
+    x.shadowColor = 'rgba(10,18,32,.4)'; x.shadowBlur = 10; x.shadowOffsetX = 4; x.shadowOffsetY = 5;
+    var g = x.createLinearGradient(l, tp, l + T.w, tp + T.h);
+    g.addColorStop(0,'#8d959f'); g.addColorStop(.5,'#c3cad2'); g.addColorStop(1,'#959da7');
+    rr(x, l, tp, T.w, T.h, 4); x.fillStyle = g; x.fill();
+    x.shadowColor = 'transparent';
+    x.fillStyle = '#a9a39a'; /* notches on the trailing (left) edge */
+    for (var y = tp + sp*.5; y < tp + T.h - sp*.5; y += sp*2) x.fillRect(l, y, sp*.8, sp);
+    /* handle post and grip */
+    x.fillStyle = '#5b636d'; x.fillRect(T.x - 2, T.y - T.h*.28, 4, T.h*.56);
+    x.shadowColor = 'rgba(10,18,32,.35)'; x.shadowBlur = 6; x.shadowOffsetX = 3; x.shadowOffsetY = 4;
+    var hg = x.createLinearGradient(0, T.y - 7, 0, T.y + 7);
+    hg.addColorStop(0,'#b07a45'); hg.addColorStop(1,'#7c5128');
+    rr(x, T.x - T.w*.36, T.y - 7, T.w*.72, 14, 7); x.fillStyle = hg; x.fill();
     x.restore();
   };
 
@@ -574,7 +617,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   for (var i = 0; i < cvs.length; i++) walls.push(new Wall(cvs[i]));
   if ('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ walls.forEach(function(w){ if (w.c === e.target) w.visible = e.isIntersecting; }); });
+      es.forEach(function(e){ walls.forEach(function(w){ if (w.c === e.target){ w.visible = e.isIntersecting; w.dirty = true; } }); });
       kick();
     });
     walls.forEach(function(w){ io.observe(w.c); });
@@ -630,6 +673,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   }
   function syncWA(){ document.getElementById('wa-form').href = WA + encodeURIComponent(compose()); }
   form.addEventListener('input', syncWA); form.addEventListener('change', syncWA); syncWA();
+  /* clear a field's error as soon as it's fixed */
+  var ERR = {name:'e-name', town:'e-town', kind:'e-kind', what:'e-what'};
+  function clear(e){
+    var n = e.target.name, id = ERR[n]; if (!id || !val(n) && n !== 'kind') return;
+    err(id, '', n === 'kind' ? form.querySelector('.chips') : e.target);
+  }
+  form.addEventListener('input', clear); form.addEventListener('change', clear);
 
   /* service rows pick their project type */
   [].forEach.call(document.querySelectorAll('[data-pick]'), function(a){
@@ -650,9 +700,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     function check(id, field, msg){ var good = err(id, msg, field); if (!good && !first) first = field; ok = ok && good; }
     check('e-name', form.elements.name, val('name') ? '' : "Add your name so we know who's texting.");
     check('e-town', form.elements.town, val('town') ? '' : 'Add your town so we know where the job is.');
-    check('e-kind', form.querySelector('input[name=kind]'), kind() ? '' : 'Pick the closest one. "Not sure yet" is fine.');
+    check('e-kind', form.querySelector('.chips'), kind() ? '' : 'Pick the closest one. "Not sure yet" is fine.');
     check('e-what', form.elements.what, val('what') ? '' : 'Tell us a little about the project.');
-    if (!ok){ first.focus(); return; }
+    if (!ok){ (first.classList.contains('chips') ? first.querySelector('input') : first).focus(); return; }
     var msg = compose();
     document.getElementById('msg').value = msg;
     document.getElementById('after').classList.add('show');
